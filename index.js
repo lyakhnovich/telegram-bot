@@ -14,7 +14,7 @@ const startGame = async (chatId) => {
   await bot.sendMessage(chatId, `загадываю число от 0 до 9, если НЕ угадаешь, то я ♂ fuck you!!! ♂`)
   const randomNumber = Math.floor(Math.random() * 10)
   chats[chatId] = randomNumber;
-  await bot.sendMessage(chatId, 'отгадывай ♂ fucking slave ♂', gameOptions)
+  await bot.sendMessage(chatId, `отгадывай ♂ fucking slave ♂ ${chats[chatId]}`, gameOptions)
 }
 
 const start = () => {
@@ -49,7 +49,7 @@ const start = () => {
       return startGame(chatId);
     }
 
-    if(data === chats[chatId]) {
+    if(data == chats[chatId]) {
       return bot.sendMessage(chatId, `ты отгадал - ${chats[chatId]} ♂ dicks ♂`, againOptions)
     } else {
       return bot.sendMessage(chatId, `ты не угадал, бот загадал ${chats[chatId]} ♂ bucks ♂, а ты - ${data}`, againOptions)
