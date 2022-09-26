@@ -45,6 +45,7 @@ const start = () => {
     const chatId = msg.chat.id
 
     if (text === '/start') {
+      
       await bot.sendSticker(chatId, `https://cdn.tlgrm.ru/stickers/06d/991/06d991f7-564f-47cd-8180-585cd0056a42/192/5.webp`)
       return bot.sendMessage(chatId, `hei! hyvää huomenta ♂♂♂!`)
     }
